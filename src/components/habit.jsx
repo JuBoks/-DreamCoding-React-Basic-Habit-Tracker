@@ -18,6 +18,7 @@ class Habit extends Component {
     };
     handleDelete = (evt) => {
         this.props.onDelete(this.props.habit);
+
     };
 
     render() {
