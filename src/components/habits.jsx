@@ -4,9 +4,7 @@ import Habit from "./habit";
 class Habits extends Component {
     state = {
         habits: [
-            {id: 1, name: "Reading", count: 0},
-            {id: 2, name: "Running", count: 0},
-            {id: 3, name: "Coding", count: 0}
+            {id: 0, name: "Example", count: 0}
         ],
     }
 
@@ -23,7 +21,7 @@ class Habits extends Component {
 
         // 내가 한 방식
         habits.find((el) => {
-            if (el.id == habit.id) {
+            if (el.id === habit.id) {
                 el.count += 1;
             }
         });
@@ -35,7 +33,7 @@ class Habits extends Component {
     handleDecrement = (habit) => {
         const habits = [...this.state.habits];
         habits.find((el) => {
-            if (el.id == habit.id) {
+            if (el.id === habit.id) {
                 let count = el.count - 1;
                 el.count = count < 0 ? 0 : count;
             }
@@ -49,22 +47,48 @@ class Habits extends Component {
 
         this.setState({ habits });
     };
+    handleAdd = (evt) => {
+        const $habitName = document.getElementById('habit-name');
+        let habits = [...this.state.habits];
+        habits.push({
+            id: habits.length,
+            name: $habitName.value,
+            count: 0
+        });
+        $habitName.value = '';
+        this.setState({ habits });
+    };
+    handleReset = () => {
+        this.setState({habits: []})
+    };
 
     render() {
         return (
-            <ul>
-                {
-                    this.state.habits.map(habit =>
-                        <Habit
-                            key={habit.id}
-                            habit={habit}
-                            onIncrement = {this.handleIncrement}
-                            onDecrement = {this.handleDecrement}
-                            onDelete = {this.handleDelete}
-                        />
-                    )
-                }
-            </ul>
+            <>
+                <nav>
+                    <i className="fas fa-leaf"></i>
+                    <span className='habit'>Habit Tracker</span>
+                    <span className='habit-count'>{this.state.habits.length}</span>
+                </nav>
+                <div className='habit-input-container'>
+                    <input className='habit-name-input' id='habit-name' placeholder='Type Habit Name'/>
+                    <button className='habit-add' onClick={this.handleAdd}>Add</button>
+                </div>
+                <ul>
+                    {
+                        this.state.habits.map(habit =>
+                            <Habit
+                                key={habit.id}
+                                habit={habit}
+                                onIncrement = {this.handleIncrement}
+                                onDecrement = {this.handleDecrement}
+                                onDelete = {this.handleDelete}
+                            />
+                        )
+                    }
+                </ul>
+                <button className='habit-reset' onClick={this.handleReset}>Reset All</button>
+            </>
         );
     }
 }

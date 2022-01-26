@@ -1,8 +1,13 @@
 import './app.css';
 import Habits from "./components/habits";
+import {Component} from "react";
 
-function App() {
-  return <Habits></Habits>;
+class App extends Component {
+
+  render() {
+    return <Habits />;
+  }
+
 }
 
 export default App;
