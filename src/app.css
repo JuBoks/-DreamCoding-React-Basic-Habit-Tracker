@@ -1,18 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
 button {
     outline: none;
     border: 0;
     cursor: pointer;
 }
 
-nav {
-    height: 4.5rem;
-    padding: 0.5rem;
-    background-color: antiquewhite;
+.navbar {
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: blanchedalmond;
 }
 
-.fa-leaf {
-    width: 3.15rem;
-    height: 30px;
+.navbar-logo {
+    margin-right: 0.5em;
     color: green;
 }
 
