@@ -49,19 +49,17 @@ class App extends Component {
 
     this.setState({ habits });
   };
-  handleAdd = (evt) => {
-    const $habitName = document.getElementById('habit-name');
-    let habits = [...this.state.habits];
-    habits.push({
-      id: habits.length,
-      name: $habitName.value,
-      count: 0
-    });
-    $habitName.value = '';
+  handleAdd = (name) => {
+    const habits = [...this.state.habits, {id: this.state.habits.length, name, count: 0}];
     this.setState({ habits });
   };
   handleReset = (evt) => {
-    this.setState({habits: []})
+    const habits = [...this.state.habits];
+    habits.map(habit => {
+      habit.count = 0;
+    });
+
+    this.setState({ habits })
   };
 
   render() {

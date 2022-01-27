@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import Habit from "./habit";
+import HabitAddForm from "./habitAddForm";
 
 class Habits extends Component {
     render() {
         return (
             <>
-                <div className='habit-input-container'>
-                    <input className='habit-name-input' id='habit-name' placeholder='Type Habit Name'/>
-                    <button className='habit-add' onClick={this.props.onAdd}>Add</button>
-                </div>
+                <HabitAddForm onAdd={this.props.onAdd} />
                 <ul>
                     {
                         this.props.habits.map(habit =>
