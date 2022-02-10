@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import NavBar from "./components-review/navBar";
-import HabitAddForm from "./components-review/habitAddForm";
 import Habits from "./components-review/habits";
 
 class App2 extends Component {
@@ -61,17 +60,14 @@ class App2 extends Component {
                 <NavBar
                     count={this.state.habits.filter(habit => habit.count > 0).length}
                 />
-                <HabitAddForm
-                    habits={this.state.habits}
-                    handleAdd={this.handleAdd}
-                />
                 <Habits
                     habits={this.state.habits}
                     handleIncrease={this.handleIncrease}
                     handleDecrease={this.handleDecrease}
                     handleDelete={this.handleDelete}
+                    handleAdd={this.handleAdd}
+                    handleReset={this.handleReset}
                 />
-                <button className="habit-reset" onClick={this.handleReset}>Reset</button>
             </div>
         );
     }

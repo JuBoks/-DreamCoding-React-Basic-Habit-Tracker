@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
-class Habit extends Component {
+class Habit extends PureComponent {
     handleIncrease = (evt) => {
         this.props.handleIncrease(this.props.habit);
     };
@@ -14,6 +14,7 @@ class Habit extends Component {
     };
 
     render() {
+        console.log("Habit")
         return (
             <li className="habit">
                 <span className="habit-name">{this.props.habit.name}</span>
