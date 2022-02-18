@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import NavBar from "./components-review/navBar";
 import Habits from "./components-review/habits";
 
+
 class App2 extends Component {
     state = {
         habits: [

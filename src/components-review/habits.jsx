@@ -1,32 +1,30 @@
-import React, {PureComponent} from 'react';
+import React, {memo} from 'react';
 import Habit from "./habit";
 import HabitAddForm from "./habitAddForm";
 
-class Habits extends PureComponent {
-    render() {
-        console.log("Habits");
-        return (
-            <div>
-                <HabitAddForm
-                    handleAdd={this.props.handleAdd}
-                />
-                <ul>
-                    {
-                        this.props.habits.map( habit =>
-                            <Habit
-                                key={habit.id}
-                                habit={habit}
-                                handleIncrease={this.props.handleIncrease}
-                                handleDecrease={this.props.handleDecrease}
-                                handleDelete={this.props.handleDelete}
-                            />
-                        )
-                    }
-                </ul>
-                <button className="habit-reset" onClick={this.props.handleReset}>Reset</button>
-            </div>
-        );
-    }
-}
+const Habits = memo((props) => {
+    console.log("Habits");
+    return (
+        <div>
+            <HabitAddForm
+                handleAdd={props.handleAdd}
+            />
+            <ul>
+                {
+                    props.habits.map( habit =>
+                        <Habit
+                            key={habit.id}
+                            habit={habit}
+                            handleIncrease={props.handleIncrease}
+                            handleDecrease={props.handleDecrease}
+                            handleDelete={props.handleDelete}
+                        />
+                    )
+                }
+            </ul>
+            <button className="habit-reset" onClick={props.handleReset}>Reset</button>
+        </div>
+    );
+});
 
 export default Habits;
