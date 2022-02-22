@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/-DreamCoding-React-Basic-Habit-Tracker/static/css/main.6ac3273f.css",
+    "main.js": "/-DreamCoding-React-Basic-Habit-Tracker/static/js/main.b2a5cdfc.js",
+    "index.html": "/-DreamCoding-React-Basic-Habit-Tracker/index.html",
+    "main.6ac3273f.css.map": "/-DreamCoding-React-Basic-Habit-Tracker/static/css/main.6ac3273f.css.map",
+    "main.b2a5cdfc.js.map": "/-DreamCoding-React-Basic-Habit-Tracker/static/js/main.b2a5cdfc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ac3273f.css",
+    "static/js/main.b2a5cdfc.js"
+  ]
+}
