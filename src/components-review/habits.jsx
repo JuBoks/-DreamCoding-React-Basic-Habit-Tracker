@@ -3,7 +3,6 @@ import Habit from "./habit";
 import HabitAddForm from "./habitAddForm";
 
 const Habits = memo((props) => {
-    console.log("Habits");
     return (
         <div>
             <HabitAddForm
