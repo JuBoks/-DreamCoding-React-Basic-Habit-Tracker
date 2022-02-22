@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/-DreamCoding-React-Basic-Habit-Tracker/static/css/main.6ac3273f.css",
-    "main.js": "/-DreamCoding-React-Basic-Habit-Tracker/static/js/main.b2a5cdfc.js",
-    "index.html": "/-DreamCoding-React-Basic-Habit-Tracker/index.html",
-    "main.6ac3273f.css.map": "/-DreamCoding-React-Basic-Habit-Tracker/static/css/main.6ac3273f.css.map",
-    "main.b2a5cdfc.js.map": "/-DreamCoding-React-Basic-Habit-Tracker/static/js/main.b2a5cdfc.js.map"
+    "main.css": "/Habit-Tracker/static/css/main.6ac3273f.css",
+    "main.js": "/Habit-Tracker/static/js/main.71313f3d.js",
+    "index.html": "/Habit-Tracker/index.html",
+    "main.6ac3273f.css.map": "/Habit-Tracker/static/css/main.6ac3273f.css.map",
+    "main.71313f3d.js.map": "/Habit-Tracker/static/js/main.71313f3d.js.map"
   },
   "entrypoints": [
     "static/css/main.6ac3273f.css",
-    "static/js/main.b2a5cdfc.js"
+    "static/js/main.71313f3d.js"
   ]
 }
